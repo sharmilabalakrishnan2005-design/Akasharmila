@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #fff0f6, #ffd9e8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255,255,255,0.92);
+            padding: 35px 25px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(180,60,100,0.20);
+        }
+
+        .heart {
+            font-size: 55px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            color: #d6336c;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #8a5367;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 90%;
+            padding: 14px;
+            margin: 8px 0;
+            border: 1px solid #f0b6ca;
+            border-radius: 25px;
+            outline: none;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        button {
+            width: 90%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 25px;
+            background: #d6336c;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #error {
+            color: #d00000;
+            display: none;
+            font-size: 14px;
+        }
+
+        #lovePage {
+            display: none;
+        }
+
+        .love-text {
+            color: #5c3b45;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .link-button {
+            display: block;
+            text-decoration: none;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            background: #d6336c;
+        }
+
+        .video-button {
+            background: #b83268;
+        }
+
+        .small {
+            margin-top: 25px;
+            color: #b06b83;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div class="card" id="loginPage">
+
+        <div class="heart">🔐❤️</div>
+
+        <h1>Hello</h1>
+
+        <p class="subtitle">
+            This little place is only for you ✨
+        </p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <button onclick="login()">
+            Open ❤️
+        </button>
+
+        <p id="error">
+            Wrong username or password 💔
+        </p>
+
+    </div>
+
+
+    <!-- LOVE PAGE -->
+    <div class="card" id="lovePage">
+
+        <div class="heart">❤️</div>
+
+        <h1>From school love to forever love.</h1>
+
+        <p class="love-text">
+            It started as a little school-time feeling, but somehow you became
+            my safest place, my favorite person, and the one story I never want
+            to end. Years passed, life changed, but my heart still finds its way
+            back to you — every single time. ❤️‍🩹✨
+            <br><br>
+            Love youu more. 🫶🏻
+        </p>
+
+        <div class="buttons">
+
+            <a
+                class="link-button"
+                href="https://open.spotify.com/track/2MwCoo4GeXpi8soWn9EiPo?si=lhyGhv_nTSitsUGwKTc7dQ&utm_source=copy-link"
+                target="_blank">
+                🎵 Our Song
+            </a>
+
+            <a
+                class="link-button video-button"
+                href="https://www.instagram.com/reel/DakvWLPzGih/?igsh=Y2lyNzB2bXliZTQ0"
+                target="_blank">
+                🎥 Watch Our Video
+            </a>
+
+        </div>
+
+        <p class="small">
+            One story. One heart. Forever. ❤️
+        </p>
+
+    </div>
+
+
+    <script>
+
+        function login() {
+
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            if (
+                username === "Akash" &&
+                password === "Forever@2026"
+            ) {
+
+                document.getElementById("loginPage").style.display = "none";
+
+                document.getElementById("lovePage").style.display = "block";
+
+            } else {
+
+                document.getElementById("error").style.display = "block";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
